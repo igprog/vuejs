@@ -11,7 +11,7 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
-        <li v-for="x in menu" v-bind:key="x" class="nav-item">
+        <li v-for="(x, idx) in menu" :key="idx" class="nav-item">
           <router-link :to="'/' + x.link" :title="x.title">
             <span class="fa fa-user fa-fw mr-3"></span>
             <span class="menu-collapsed text-secondary">
