@@ -15,7 +15,6 @@ export const mixin = {
             alert('mixin ok');
         },
         get(path) {
-            debugger;
             return this.$http.get(this.frontend + path).then(res => {
                 return JSON.parse(res.body.d);
             })
@@ -23,6 +22,7 @@ export const mixin = {
         post(service, method, data) {
             this.loading = true;
             return this.$http.post(this.backend + service + '.asmx/' + method, data).then(res => {
+                debugger;
                 this.loading = false;
                 return JSON.parse(res.body.d);
             });

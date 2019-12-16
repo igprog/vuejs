@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/pages/HelloWorld'
 import home from '@/pages/home'
 import client from '@/pages/client'
 import clients from '@/pages/clients'
@@ -16,7 +15,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home Page',
+      name: 'home',
       component: home
     },
     {
@@ -48,11 +47,6 @@ export default new Router({
       path: '/test',
       name: 'test',
       component: test
-    },
-    {
-      path: '/helloworld',
-      name: 'HelloWorld',
-      component: HelloWorld
     }
   ]
 })

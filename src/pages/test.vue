@@ -3,17 +3,17 @@
     <h1>{{d.msg}}</h1>
     globalVariable: {{d.gl}}
     <div>
-      <control type="button" @click="testMixin" css="warning" title="Test mixin"/>
+      <control type="button" @click="testMixin" css="warning" title="Test mixin" />
     </div>
     <div>
-      <control type="button" @click="getConfig" css="info" title="Test Http Get"/>
+      <control type="button" @click="getConfig" css="info" title="Test Http Get" />
     </div>
     <div>
-      <control type="button" @click="postData" css="primary" title="Test Http Post"/>
-        <loading :val="loading" title="Loading Data from web service" />
+      <control type="button" @click="postData" css="primary" title="Test Http Post" />
+      <loading :val="loading" title="Loading Data from web service" />
     </div>
     <div>
-      <control type="button" @click="testLoading" css="danger" title="Test Loading"/>
+      <control type="button" @click="testLoading" css="danger" title="Test Loading" />
     </div>
     <loading :val="d.loading" title="Loading..." />
     <icon name="home" scale="5" title="Test"></icon>
@@ -29,7 +29,9 @@ import { mixin } from "../mixins/mixin.js";
 export default {
   mixins: [mixin],
   components: {
-    json, control, loading
+    json,
+    control,
+    loading
   },
   data() {
     return {
@@ -44,8 +46,9 @@ export default {
   },
   methods: {
     getConfig() {
-      this.d.config = this.get("config/config.json").then(d => {
-        this.config = d;
+      debugger;
+      this.get("config/config.json").then(d => {
+        this.g.config = d;
       });
     },
     postData() {

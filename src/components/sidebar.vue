@@ -17,7 +17,7 @@ export default {
   data () {
     return {
       menu: [
-        { link: '', title: 'Dashboard', ico: 'home' },
+        { link: 'home', title: 'Dashboard', ico: 'home' },
         { link: 'client/10', title: 'New Client', ico: 'user' },
         { link: 'clients', title: 'Search Clients', ico: 'users' },
         { link: 'test', title: 'Test', ico: 'cogs' },

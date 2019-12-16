@@ -32,6 +32,8 @@ Vue.config.productionTip = false
 
 Vue.prototype.$globalVariable = 'global var';  // Test globaln a varijabla
 
+Vue.prototype.$isLogin = false;
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
